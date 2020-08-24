@@ -1,0 +1,180 @@
+p,
+li {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+h6,
+h5 {
+  color: #000;
+}
+
+.first .title {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.first .subtitle {
+  font-size: 16px;
+}
+
+.first .card {
+  padding: 0 16px;
+  border-radius: 8px;
+  border-top: 4px solid #40627b;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.first .card .col-lg-4.py-3 {
+  border-right: 1px solid #dee2e6;
+}
+
+.first .round {
+  position: relative;
+  top: 11px;
+}
+
+.first .round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.first .round label:after {
+  border: 2px solid #e3f5ff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 3px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 12px;
+}
+
+.first .round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.first .round input[type="checkbox"] :checked + label {
+  background-color: #40627b;
+  border-color: #40627b;
+}
+
+.first .round input[type="checkbox"] :checked + label:after {
+  opacity: 1;
+}
+
+.card .booking {
+  width: 100%;
+  background: #40627b;
+  border: none;
+  padding: 0.8rem 0.75rem;
+}
+
+.card .base {
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.card .base .date {
+  background: #f8f9fd;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+
+.card .base .date .card {
+  border: none;
+}
+
+.card .base .date .card .card-body {
+  padding: 10px 1.25rem 10px 10px;
+}
+
+.card .base .date .card .card-img {
+  font-size: 20px;
+  text-align: right;
+  padding-top: 1.2rem;
+}
+
+.card .base .date .card .card-title {
+  font-size: 16px;
+}
+
+.card .packages .total {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.card .packages .bg-total {
+  background: #e4f5fd;
+}
+
+.card .packages .bg-total p:last-child {
+  font-weight: 500;
+}
+
+.card .packages .bg-total th {
+  border-bottom-left-radius: 10px;
+}
+
+.card .packages .bg-total td:nth-child(4) {
+  border-bottom-right-radius: 10px;
+}
+
+.card .packages .bg-total td:nth-child(4) {
+  border-bottom-right-radius: 10px;
+}
+
+.card .packages img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.card .packages thead th {
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card .packages tbody {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 2px #dee2e6;
+          box-shadow: 0 0 0 2px #dee2e6;
+}
+
+.card .packages tbody tr:nth-child(1) td,
+.card .packages tbody tr:nth-child(1) td {
+  border: none;
+}
+
+.card .packages tbody th:nth-child(1) {
+  width: 175px;
+}
+
+.card .personal .title-text {
+  font-size: 12px;
+}
+
+.card .personal .next-step a {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.card .personal .next-step .form-check-label {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
