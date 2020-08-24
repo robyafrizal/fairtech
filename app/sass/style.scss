@@ -29,45 +29,48 @@ h5 {
     border-top-left-radius: 0;
     .col-lg-4.py-3 {
       border-right: 1px solid #dee2e6;
+      &:last-child {
+        border: none;
+      }
     }
   }
   .round {
     position: relative;
     top: 11px;
-    label {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 50%;
-      cursor: pointer;
-      height: 20px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 20px;
-    }
-    label:after {
-      border: 2px solid #e3f5ff;
-      border-top: none;
-      border-right: none;
-      content: "";
-      height: 6px;
-      left: 3px;
-      opacity: 0;
-      position: absolute;
-      top: 5px;
-      transform: rotate(-45deg);
-      width: 12px;
-    }
-    input[type="checkbox"] {
-      visibility: hidden;
-      :checked + label {
-        background-color: #40627b;
-        border-color: #40627b;
-      }
-      :checked + label:after {
-        opacity: 1;
-      }
-    }
+  }
+  .round label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+  }
+  .round label:after {
+    border: 2px solid #e3f5ff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 3px;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    transform: rotate(-45deg);
+    width: 12px;
+  }
+  .round input[type="checkbox"] {
+    visibility: hidden;
+  }
+  .round input[type="checkbox"]:checked + label {
+    background-color: #40627b;
+    border-color: #40627b;
+  }
+  .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
   }
 }
 
@@ -78,7 +81,7 @@ h5 {
     border: none;
     padding: 0.8rem 0.75rem;
   }
-  .base {
+  &.base {
     border-radius: 10px;
     padding: 24px;
     .date {
@@ -108,17 +111,19 @@ h5 {
     }
     .bg-total {
       background: #e4f5fd;
+      p:first-child {
+        color: black;
+      }
       p:last-child {
         font-weight: 500;
       }
       th {
         border-bottom-left-radius: 10px;
       }
-      td:nth-child(4) {
-        border-bottom-right-radius: 10px;
-      }
-      td:nth-child(4) {
-        border-bottom-right-radius: 10px;
+      td {
+        &:nth-child(4) {
+          border-bottom-right-radius: 10px;
+        }
       }
     }
     img {

@@ -1,12 +1,24 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
+var gulpConnect = require("gulp-connect");
 var gulpMinifyCss = require("gulp-minify-css");
 var gulpConcat = require("gulp-concat");
 var gulpUglify = require("gulp-uglify");
 var gulpHtmlmin = require("gulp-htmlmin");
 
+gulp.task("server", async function () {
+  gulpConnect.server({
+    root: "dist",
+    livereload: true,
+  });
+});
+
 gulp.task("styles", async function () {
-  gulp.src("./app/sass/*.scss").pipe(sass()).pipe(gulp.dest("app/css"));
+  gulp
+    .src("./app/sass/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("app/css"))
+    .pipe(gulpConnect.reload());
 });
 
 gulp.task("minify-css", async function () {
@@ -17,7 +29,8 @@ gulp.task("minify-css", async function () {
         compatibility: "ie8",
       })
     )
-    .pipe(gulp.dest("./dist/"));
+    .pipe(gulp.dest("./dist/"))
+    .pipe(gulpConnect.reload());
 });
 
 gulp.task("minify-js", async function () {
@@ -25,7 +38,8 @@ gulp.task("minify-js", async function () {
     .src(["./app/js/*.js"])
     .pipe(gulpConcat("bundle.js"))
     .pipe(gulpUglify())
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("dist"))
+    .pipe(gulpConnect.reload());
 });
 
 gulp.task("minify-html", async function () {
@@ -36,7 +50,8 @@ gulp.task("minify-html", async function () {
         collapseWhitespace: true,
       })
     )
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("dist"))
+    .pipe(gulpConnect.reload());
 });
 
 gulp.task("watch", async function () {
@@ -46,4 +61,4 @@ gulp.task("watch", async function () {
   gulp.watch("./app/*.html", gulp.series("minify-html"));
 });
 
-gulp.task("default", gulp.series("watch"));
+gulp.task("default", gulp.series("watch", "server"));

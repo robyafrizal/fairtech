@@ -22,39 +22,46 @@ h5 {
   border-top-left-radius: 0; }
   .first .card .col-lg-4.py-3 {
     border-right: 1px solid #dee2e6; }
+    .first .card .col-lg-4.py-3:last-child {
+      border: none; }
 
 .first .round {
   position: relative;
   top: 11px; }
-  .first .round label {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    height: 20px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 20px; }
-  .first .round label:after {
-    border: 2px solid #e3f5ff;
-    border-top: none;
-    border-right: none;
-    content: "";
-    height: 6px;
-    left: 3px;
-    opacity: 0;
-    position: absolute;
-    top: 5px;
-    transform: rotate(-45deg);
-    width: 12px; }
-  .first .round input[type="checkbox"] {
-    visibility: hidden; }
-    .first .round input[type="checkbox"] :checked + label {
-      background-color: #40627b;
-      border-color: #40627b; }
-    .first .round input[type="checkbox"] :checked + label:after {
-      opacity: 1; }
+
+.first .round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px; }
+
+.first .round label:after {
+  border: 2px solid #e3f5ff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 3px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 12px; }
+
+.first .round input[type="checkbox"] {
+  visibility: hidden; }
+
+.first .round input[type="checkbox"]:checked + label {
+  background-color: #40627b;
+  border-color: #40627b; }
+
+.first .round input[type="checkbox"]:checked + label:after {
+  opacity: 1; }
 
 .card .booking {
   width: 100%;
@@ -62,22 +69,22 @@ h5 {
   border: none;
   padding: 0.8rem 0.75rem; }
 
-.card .base {
+.card.base {
   border-radius: 10px;
   padding: 24px; }
-  .card .base .date {
+  .card.base .date {
     background: #f8f9fd;
     border: 1px solid #dee2e6;
     border-radius: 10px; }
-    .card .base .date .card {
+    .card.base .date .card {
       border: none; }
-      .card .base .date .card .card-body {
+      .card.base .date .card .card-body {
         padding: 10px 1.25rem 10px 10px; }
-      .card .base .date .card .card-img {
+      .card.base .date .card .card-img {
         font-size: 20px;
         text-align: right;
         padding-top: 1.2rem; }
-      .card .base .date .card .card-title {
+      .card.base .date .card .card-title {
         font-size: 16px; }
 
 .card .packages .total {
@@ -86,12 +93,12 @@ h5 {
 
 .card .packages .bg-total {
   background: #e4f5fd; }
+  .card .packages .bg-total p:first-child {
+    color: black; }
   .card .packages .bg-total p:last-child {
     font-weight: 500; }
   .card .packages .bg-total th {
     border-bottom-left-radius: 10px; }
-  .card .packages .bg-total td:nth-child(4) {
-    border-bottom-right-radius: 10px; }
   .card .packages .bg-total td:nth-child(4) {
     border-bottom-right-radius: 10px; }
 
