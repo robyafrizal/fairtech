@@ -8,7 +8,7 @@ var gulpHtmlmin = require("gulp-htmlmin");
 
 gulp.task("server", async function () {
   gulpConnect.server({
-    root: "dist",
+    root: "app",
     livereload: true,
   });
 });
